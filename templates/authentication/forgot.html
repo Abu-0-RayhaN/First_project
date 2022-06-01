@@ -1,0 +1,57 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block content %}
+    <pre>                    
+
+    </pre>
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="text-center">I forgot my password</h2>
+          
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+    
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+       
+
+    
+
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-4">
+          <h4 class="text-center">Forgot password</h3>
+            <form action="" method="post" role="form">
+            {% csrf_token %}
+              <div class="row">
+            
+              <div class="form-group mt-3">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="text-center"><button type="submit" class="btn btn-success btn-block">forgot password</button></div>
+            </form><br/><br>
+            <small>login to my account<a href="{% url 'login' %}">&nbsp; &nbsp; click Here!</a></small>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  
+
+{% endblock content %}
+{% block title %}
+<p>contact page</p>
+{% endblock title %}
